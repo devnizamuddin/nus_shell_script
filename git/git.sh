@@ -1,7 +1,8 @@
 
+source ./git_menu.sh
 
 function runGit() {
 
-  echo "I am From Git"
+  showGitMenusList
 
 }

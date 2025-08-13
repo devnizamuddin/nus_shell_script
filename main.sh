@@ -23,7 +23,8 @@
 source ./menu.sh
 source ./test.sh
 source ./text_style.sh
-
+source ./menu_executor.sh
+source ./git_menu.sh
 
 
 #*
@@ -57,9 +58,9 @@ function runApp(){
   local choice
   read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
   
-  echo "$choice"
+  exetcuteMenu $choice
 
-  
+
 }
 
 #*

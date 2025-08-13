@@ -18,49 +18,19 @@ function exetcuteMenu() {
 
     case $choice in
       0)
-         exit_script
+        runGit
         ;;
       1)
-        stage_choosen_files
-        ;;
-      1a)
-        stage_all_files
+      echo "🐙 Git"
+        # stage_choosen_files
         ;;
       2)
+      echo "🦋 Flutter"
         unstage_choosen_files
         ;;
-      2a)
-        unstage_All_changed_file
-        ;;
       3)
-        commit_changes
-        ;;
-      3p)
-        commit_and_push
-        ;;
-      4)
-        pull_and_push
-        ;;
-      4m)
-        merge_branch
-        ;;
-      5)
-        git_diff_branches
-        ;;
-      6)
-        git_log
-        ;;
-      7)
-        show_commit_changes
-        ;;
-      8s)
-        git_soft_reset
-        ;;
-      8h)
-        git_hard_reset
-        ;;
-      9)
-        utilitiesTask
+      echo "💬 Comment  "
+        # commit_changes
         ;;
       *)
         echo -e "${GOLDEN}Option not recognized${RESET}"
