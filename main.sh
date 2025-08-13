@@ -20,7 +20,6 @@
 #* ┗==================================================================================================┛
 #* 
 
-source ./git/git.sh
 source ./menu.sh
 source ./test.sh
 source ./text_style.sh
@@ -55,10 +54,10 @@ function runApp(){
 
   showMenusList
 
-  local mainChoice
-  read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" mainChoice
+  local choice
+  read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
   
-  echo "$mainChoice"
+  echo "$choice"
 }
 
 #*
