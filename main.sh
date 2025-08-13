@@ -20,8 +20,9 @@
 #* ┗==================================================================================================┛
 #* 
 
-source ./changed_files.sh
+source ./git/git.sh
 source ./menu.sh
+source ./test.sh
 source ./text_style.sh
 
 
@@ -32,22 +33,40 @@ source ./text_style.sh
 #* ┗==================================================================================================┛
 #* 
 
-function main(){
+# function main(){
 
-  showChangedFiles
-  local main_choice=-1
+#   showChangedFiles
+#   local main_choice=-1
 
-  while [[ "$main_choice" != "0" ]]; do
+#   while [[ "$main_choice" != "0" ]]; do
     
-    showMenusList
-    read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice (1-11)${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" main_choice
-    echo ""
+#     showMainMenusList
+#     read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice (1-11)${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" main_choice
+#     echo ""
 
-    # exetcute_choosen_git_operation $main_choice
+#     # exetcute_choosen_git_operation $main_choice
 
-  done
+#   done
 
-  exit 0
+#   exit 0
+# }
+
+function runApp(){
+
+  showMenusList
+
+  local mainChoice
+  read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" mainChoice
+  
+  echo "$mainChoice"
 }
 
-main
+#*
+#* ┏==================================================================================================┓
+#* ┃                                    Run Main Function                                             ┃
+#* ┗==================================================================================================┛
+#* 
+
+runApp
+
+# source test.sh

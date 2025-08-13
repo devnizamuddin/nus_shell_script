@@ -4,7 +4,7 @@
 #* ┗==================================================================================================┛
 #* 
 
-function exetcute_choosen_git_operation() {
+function exetcuteMenu() {
   local choice="$1"
 
   if [[ "$choice" =~ ^[0-9a-zA-Z]+$ ]]; then
