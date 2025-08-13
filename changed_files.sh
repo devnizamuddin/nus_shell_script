@@ -1,14 +1,13 @@
 #*
 #* ┏==================================================================================================┓
-#* ┃                     Show all untracked and modified files by categories                          ┃
+#* ┃  Objective : Show all untracked, unstaged, staged files                                          ┃
+#* ┃--------------------------------------------------------------------------------------------------┃
+#* ┃  Input     : none                                                                                ┃
+#* ┃  Output    : untrackedFiles, unstagedFiles, stagedFiles                                          ┃
 #* ┗==================================================================================================┛
-#* Categories →
-#* -------------------
-#? 1. Staged files
-#? 2. Unstaged files
-#? 3. Untracked files
+#*
 
-
+function showChangedFiles(){
 echo ""
 
 # Get staged, unstaged, and untracked files
@@ -70,3 +69,6 @@ else
     echo -e "${YELLOW}  No untracked files.${RESET}"
 fi
 echo ""
+
+}
+
