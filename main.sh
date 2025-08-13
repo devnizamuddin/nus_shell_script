@@ -58,6 +58,8 @@ function runApp(){
   read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
   
   echo "$choice"
+
+  
 }
 
 #*

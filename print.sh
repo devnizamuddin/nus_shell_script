@@ -1,18 +1,3 @@
-#!/bin/bash
-
-print_color_block() {
-    local fg="$1"
-    local bg="$2"
-    shift 2
-    for line in "$@"; do
-        echo -e "\033[${fg};${bg}m$line\033[0m"
-    done
-}
-
-#!/bin/bash
-
-#!/bin/bash
-
 print_text() {
     # \033[37;44m → White text (37) on Blue background (44)
     # \033[0m → Reset to default colors at the end
