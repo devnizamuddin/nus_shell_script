@@ -31,7 +31,7 @@
 #* ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
 #* 
 
-# source ./menu.sh
+source ./menu.sh
 source ./printer.sh
 # source ./test_code.sh
 # source ./text_style.sh
@@ -47,7 +47,8 @@ source ./printer.sh
 function runApp(){
   
   printHeader "                       Wellcome to NUS Shell Script"
-  # showMenusList
+  
+  showMenusList
 
   # local choice
   # read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
