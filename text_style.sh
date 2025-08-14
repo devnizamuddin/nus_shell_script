@@ -35,6 +35,7 @@ BG_BLUE='\033[44m'
 BG_MAGENTA='\033[45m'
 BG_CYAN='\033[46m'
 BG_WHITE='\033[47m'
+TEXT_COLOR='\033[1;37m'
 BG_GOLDEN='\033[48;5;214m'  # Extended color for golden background
 BG_GREEN='\033[42m'
 
