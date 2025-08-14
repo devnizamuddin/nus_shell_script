@@ -1,18 +1,11 @@
 #!/bin/sh
+# main.sh
 
-#* ╔═══════════════════════════════════════════════════════════════╗
-#* ║                                                               ║
-#* ║ 🧠 Purpose   : Main file of the Project                       ║
-#* ║                                                               ║
-#* ║ 🙎‍♂️ Author    : Nizam Uddin Shamrat                            ║
-#* ║                                                               ║
-#* ║ 📧 Email     : dev.nizamuddin@gmail.com                       ║
-#* ║                                                               ║
-#* ║ 🌍 Portfolio : https://devnizamuddin.github.io                ║
-#* ║                                                               ║
-#* ║ 🗓️ Date      : 13 August 2025        🕰 Time : 02:51 PM       ║
-#* ║                                                               ║
-#* ╚═══════════════════════════════════════════════════════════════╝
+#*
+#* ┏==================================================================================================┓
+#* ┃                                      🧾 Example Code                                             ┃
+#* ┗==================================================================================================┛
+#*
 
 # function main(){
 
@@ -25,7 +18,7 @@
 #     read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice (1-11)${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" main_choice
 #     echo ""
 
-#     # exetcute_choosen_git_operation $main_choice
+# exetcute_choosen_git_operation $main_choice
 
 #   done
 
@@ -38,14 +31,12 @@
 #* ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
 #* 
 
-
 source ./menu.sh
 source ./printer.sh
 source ./test_code.sh
 # source ./text_style.sh
 # source ./menu_executor.sh
 # source ./git_menu.sh
-
 
 #*
 #* ┏==================================================================================================┓
@@ -61,7 +52,6 @@ function runApp(){
   # read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
   
   # exetcuteMenu $choice
-
 
 }
 
@@ -80,3 +70,4 @@ function runApp(){
 #* 
 
 runTest
+
