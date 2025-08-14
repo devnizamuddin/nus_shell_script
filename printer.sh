@@ -25,3 +25,4 @@ print_full_bg() {
 print_full_bg "$GREEN" "$BG_BLUE" "Line 1: Hello" "Line 2: Welcome"
 print_full_bg "$YELLOW" "$BG_RED" "Line 3: This is colorful" "Line 4: Enjoy!"
 print_full_bg "$BLUE" "$BG_YELLOW" "Line 5: Goodbye"
+
