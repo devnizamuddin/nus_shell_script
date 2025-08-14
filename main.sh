@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #* ╔═══════════════════════════════════════════════════════════════╗
 #* ║                                                               ║
@@ -20,11 +20,19 @@
 #* ┗==================================================================================================┛
 #* 
 
+#* 
+#* ╔═══════════════════════════════════════════════════════════════╗
+#* ║                        Imported Files                         ║
+#* ╚═══════════════════════════════════════════════════════════════╝
+#* 
+
+
 source ./menu.sh
-source ./test.sh
-source ./text_style.sh
-source ./menu_executor.sh
-source ./git_menu.sh
+source ./printer.sh
+source ./test_code.sh
+# source ./text_style.sh
+# source ./menu_executor.sh
+# source ./git_menu.sh
 
 
 #*
@@ -55,10 +63,10 @@ function runApp(){
 
   showMenusList
 
-  local choice
-  read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
+  # local choice
+  # read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
   
-  exetcuteMenu $choice
+  # exetcuteMenu $choice
 
 
 }
