@@ -31,9 +31,9 @@
 #* ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
 #* 
 
-source ./menu.sh
+# source ./menu.sh
 source ./printer.sh
-source ./test_code.sh
+# source ./test_code.sh
 # source ./text_style.sh
 # source ./menu_executor.sh
 # source ./git_menu.sh
@@ -45,8 +45,9 @@ source ./test_code.sh
 #* 
 
 function runApp(){
-
-  showMenusList
+  
+  printHeader "                       Wellcome to NUS Shell Script"
+  # showMenusList
 
   # local choice
   # read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
@@ -61,7 +62,7 @@ function runApp(){
 #* ┗==================================================================================================┛
 #* 
 
-# runApp
+runApp
 
 #*
 #* ┏==================================================================================================┓
@@ -69,5 +70,5 @@ function runApp(){
 #* ┗==================================================================================================┛
 #* 
 
-runTest
+# runTest
 

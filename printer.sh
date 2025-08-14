@@ -62,14 +62,18 @@ function print() {
         pad=$((TERM_WIDTH - line_length))
         [ "$pad" -lt 0 ] && pad=0
         # Print line with background color
-        printf "${TEXT_COLOR}${BG_GREEN} %s%*s${NC}\n" "$line" "$pad" ""
+        printf "${TEXT_COLOR}${BG_GREEN}%s%*s${NC}\n" "$line" "$pad" ""
     done
 }
 
-print_header() {
+printHeader() {
     local title="$1"
     # You can add top and bottom padding or separators
-    print "========================================"
-    print "$title"
-    print "========================================"
+    print " "
+    print "==============================================================================="
+    print " $title"
+    print "==============================================================================="
+    print " "
 }
+
+
