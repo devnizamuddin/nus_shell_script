@@ -22,7 +22,8 @@
 #* 
   
   printHeader "                       Wellcome to NUS Shell Script"
-  
+  log "Application started"
+
   showMenusList
   # name=$(get_input "Enter your name")
   # echo "Hello, $name!"
