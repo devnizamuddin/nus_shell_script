@@ -85,4 +85,9 @@ function printEmojiText() {
     print " $emojiText"
 }
 
+function chooseMenu() {
+    local emojiText="$1"
+    print " $emojiText"
+}
+
 

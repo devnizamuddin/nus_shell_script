@@ -22,9 +22,11 @@
 #* 
   
   printHeader "                       Wellcome to NUS Shell Script"
-  name=$(get_input "Enter your name")
-  echo "Hello, $name!"
-  success "Said hello to $name"
+  
+  showMenusList
+  # name=$(get_input "Enter your name")
+  # echo "Hello, $name!"
+  # success "Said hello to $name"
 
 
 #*
