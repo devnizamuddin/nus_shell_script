@@ -66,7 +66,7 @@ function print() {
     done
 }
 
-printHeader() {
+function printHeader() {
     local title="$1"
     # You can add top and bottom padding or separators
     print " "
@@ -74,6 +74,15 @@ printHeader() {
     print " $title"
     print "==============================================================================="
     print " "
+}
+
+function printLine(){
+    print "==============================================================================="
+}
+
+function printEmojiText() {
+    local emojiText="$1"
+    print " $emojiText"
 }
 
 

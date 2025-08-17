@@ -24,11 +24,17 @@ source ./printer.sh
 
 function showMenusList() {
 
-   printHeader "Select Menu 👨‍💻"
-
-   # 1 → 🐙 Git                        2 → 🦋 Flutter
-
-   # 3 → 💬 Comment                    4 → Not Decided
-
+   print " "
+   printLine                         
+   print " "
+   printEmojiText "🧾 Choose Menu                                                                "
+   print " "                         
+   printEmojiText "1 → 🐙 Git                        2 → 🦋 Flutter                              "
+   print " "                         
+   printEmojiText "3 → 💬 Comment                    4 → Not Decided                             "
+   print " "                         
+   printLine                         
+   print " "                         
+   
 }
 
