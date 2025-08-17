@@ -14,7 +14,7 @@
 #* ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
 #*
 
-# source ./git/git.sh
+  source ./git/git.sh
   source ./exit_script.sh
 
 #*
@@ -33,9 +33,7 @@ function exetcuteMenu() {
         exitScript
         ;;
       1)
-      echo "🐙 Git"
-        # stage_choosen_files
-        print "Menu Executor"
+        runGit
         ;;
       2)
       echo "🦋 Flutter"
