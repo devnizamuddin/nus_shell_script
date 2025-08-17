@@ -22,6 +22,7 @@
 #* 
   
   printHeader "                       Wellcome to NUS Shell Script"
+  
   log "Application started"
 
   showMenusList
