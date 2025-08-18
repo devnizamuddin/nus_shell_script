@@ -6,66 +6,25 @@
 #* ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
 #* 
 
-. ./menu.sh
-. ./printer.sh
-. ./utils.sh
-. ./menu_executor.sh
-
-# source ./test_code.sh
-# source ./text_style.sh
-# source ./menu_executor.sh
-# source ./git_menu.sh
+. ./printer.sh #* Printing
+. ./utils.sh #* Log
+. ./menu.sh #* Show Menu
+. ./menu_executor.sh #* Execute Menu
 
 #*
 #* ┏==================================================================================================┓
 #* ┃                                   Start  Here...                                                 ┃
 #* ┗==================================================================================================┛
 #* 
-  
+  #* Showing App Header
   printHeader "                       Wellcome to NUS Shell Script"
   
+  #* Log app starting
   log "Application started"
 
+  #* Show Feature List
   showMenusList
 
-
-  read -p "$(echo "\n${BOLD}${GREEN}🖌   Enter your choice (1-11)${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
+  read -p "$(echo "\n${BOLD}${GREEN}🖌   Enter your choice (1-3)${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
 
   exetcuteMenu "$choice"
-
-
-#*
-#* ┏==================================================================================================┓
-#* ┃                                        Run Test                                                  ┃
-#* ┗==================================================================================================┛
-#* 
-
-# runTest
-
-#*
-#* ┏==================================================================================================┓
-#* ┃                                      🧾 Example Code                                             ┃
-#* ┗==================================================================================================┛
-#*
-
-# name=$(get_input "Enter your name")
-# echo "Hello, $name!"
-# success "Said hello to $name"
-
-# function main(){
-
-#   showChangedFiles
-#   local main_choice=-1
-
-#   while [[ "$main_choice" != "0" ]]; do
-    
-#     showMainMenusList
-#     read -p "$(echo -e "\n${BOLD}${GREEN}🖌   Enter your choice (1-11)${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" main_choice
-#     echo ""
-
-# exetcute_choosen_git_operation $main_choice
-
-#   done
-
-#   exit 0
-# }

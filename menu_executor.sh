@@ -14,7 +14,8 @@
 #*
 
   source ./git/git.sh
-  source ./exit_script.sh
+  . ./flutter/flutter_main.sh
+  . ./exit_script.sh
 
 #*
 #* ┏==================================================================================================┓
@@ -35,8 +36,7 @@ function exetcuteMenu() {
         runGit
         ;;
       2)
-      echo "🦋 Flutter"
-        unstage_choosen_files
+        run_flutter
         ;;
       3)
       echo "💬 Comment  "
