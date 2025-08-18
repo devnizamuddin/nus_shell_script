@@ -8,7 +8,7 @@
 #*
 
 
-source ./changed_files.sh
+. ./changed_files.sh
 # source ./git_menu.sh
 
 

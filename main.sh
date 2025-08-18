@@ -9,6 +9,7 @@
 . ./menu.sh
 . ./printer.sh
 . ./utils.sh
+. ./menu_executor.sh
 
 # source ./test_code.sh
 # source ./text_style.sh
@@ -26,9 +27,11 @@
   log "Application started"
 
   showMenusList
-  # name=$(get_input "Enter your name")
-  # echo "Hello, $name!"
-  # success "Said hello to $name"
+
+
+  read -p "$(echo "\n${BOLD}${GREEN}🖌   Enter your choice (1-11)${RESET} || ${BOLD}${RED}0 to Exit: ${RESET}")" choice
+
+  exetcuteMenu "$choice"
 
 
 #*
@@ -44,6 +47,10 @@
 #* ┃                                      🧾 Example Code                                             ┃
 #* ┗==================================================================================================┛
 #*
+
+# name=$(get_input "Enter your name")
+# echo "Hello, $name!"
+# success "Said hello to $name"
 
 # function main(){
 
