@@ -4,7 +4,6 @@ ___
 
 
 ## Installation
-___
 
 ```sh
 
@@ -14,7 +13,6 @@ chmod +x install.sh bin/mycli
 ```
 
 **Then you can run anywhere**
-___
 
 mycli help
 
@@ -29,6 +27,7 @@ chmod +x uninstall.sh
 
 ```
 
+___
 
 **🔎 How it works**
 
