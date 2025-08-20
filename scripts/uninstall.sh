@@ -1,8 +1,11 @@
 #!/bin/sh
-# Uninstaller for nus (POSIX compliant)
+# POSIX uninstaller
 
-APP_NAME="nus"
 INSTALL_DIR="/usr/local/bin"
+ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+BIN_DIR="$ROOT_DIR/bin"
+
+APP_NAME=$(ls "$BIN_DIR" | head -n 1)
 TARGET="$INSTALL_DIR/$APP_NAME"
 
 if [ ! -L "$TARGET" ] && [ ! -f "$TARGET" ]; then

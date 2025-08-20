@@ -1,6 +1,6 @@
 #!/bin/sh
+# CLI command dispatcher
 
-# Load core helpers
 . "$(dirname "$0")/core/utils.sh"
 
 main() {
@@ -12,6 +12,6 @@ main() {
     init)    . "$(dirname "$0")/commands/init.sh" "$@" ;;
     build)   . "$(dirname "$0")/commands/build.sh" "$@" ;;
     deploy)  . "$(dirname "$0")/commands/deploy.sh" "$@" ;;
-    *) echo "Unknown command: $cmd" >&2; exit 1 ;;
+    *) echo "[ERROR] Unknown command: $cmd" >&2; exit 1 ;;
   esac
 }

@@ -1,7 +1,11 @@
 #!/bin/sh
 # Entry point for the CLI (POSIX compliant)
 
-SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/../src" && pwd)
-. "$SCRIPT_DIR/cli.sh"
+# Resolve the actual path of this script
+SCRIPT_PATH=$(realpath "$0" 2>/dev/null || readlink -f "$0")
+ROOT_DIR=$(dirname "$SCRIPT_PATH")/..
+SRC_DIR="$ROOT_DIR/src"
+
+. "$SRC_DIR/cli.sh"
 
 main "$@"

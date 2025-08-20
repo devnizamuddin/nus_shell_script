@@ -1,20 +1,20 @@
 #!/bin/sh
-# Installer for nus (POSIX compliant)
+# POSIX installer
 
 set -e
 
-APP_NAME="nus"
 INSTALL_DIR="/usr/local/bin"
 ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-BIN_FILE="$ROOT_DIR/bin/$APP_NAME"
+BIN_DIR="$ROOT_DIR/bin"
 
-# Check if bin/nus exists
+APP_NAME=$(ls "$BIN_DIR" | head -n 1)
+BIN_FILE="$BIN_DIR/$APP_NAME"
+
 if [ ! -f "$BIN_FILE" ]; then
   echo "❌ Error: $BIN_FILE not found."
   exit 1
 fi
 
-# Ask for confirmation
 echo "This will install '$APP_NAME' into $INSTALL_DIR"
 printf "Proceed? [y/N]: "
 read ans
@@ -23,7 +23,6 @@ case "$ans" in
   *) echo "Installation cancelled."; exit 0 ;;
 esac
 
-# Needs sudo if not writable
 if [ ! -w "$INSTALL_DIR" ]; then
   echo "🔑 Root permission required (sudo)"
   sudo ln -sf "$BIN_FILE" "$INSTALL_DIR/$APP_NAME"

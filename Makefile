@@ -1,5 +1,7 @@
-APP_NAME = nus
 SCRIPTS_DIR = scripts
+BIN_DIR = bin
+
+APP_NAME := $(shell ls $(BIN_DIR) | head -n 1)
 
 .PHONY: all install uninstall clean
 
@@ -10,7 +12,7 @@ all:
 	@echo "  make clean     Remove temporary files"
 
 install:
-	@chmod +x $(SCRIPTS_DIR)/install.sh bin/$(APP_NAME)
+	@chmod +x $(SCRIPTS_DIR)/install.sh $(BIN_DIR)/$(APP_NAME)
 	@$(SCRIPTS_DIR)/install.sh
 
 uninstall:
@@ -20,5 +22,3 @@ uninstall:
 clean:
 	@echo "Cleaning..."
 	@rm -rf *.log
-
-
