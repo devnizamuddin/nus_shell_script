@@ -1,14 +1,14 @@
 #!/bin/sh
-# Installer for mycli (POSIX compliant)
+# Installer for nus (POSIX compliant)
 
 set -e
 
-APP_NAME="mycli"
+APP_NAME="nus"
 INSTALL_DIR="/usr/local/bin"
-SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-BIN_FILE="$SCRIPT_DIR/bin/$APP_NAME"
+ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+BIN_FILE="$ROOT_DIR/bin/$APP_NAME"
 
-# Check if bin/mycli exists
+# Check if bin/nus exists
 if [ ! -f "$BIN_FILE" ]; then
   echo "❌ Error: $BIN_FILE not found."
   exit 1
@@ -19,12 +19,8 @@ echo "This will install '$APP_NAME' into $INSTALL_DIR"
 printf "Proceed? [y/N]: "
 read ans
 case "$ans" in
-  y|Y|yes|YES)
-    ;;
-  *)
-    echo "Installation cancelled."
-    exit 0
-    ;;
+  y|Y|yes|YES) ;;
+  *) echo "Installation cancelled."; exit 0 ;;
 esac
 
 # Needs sudo if not writable

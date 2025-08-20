@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "Usage: mycli <command>"
+echo "Usage: nus <command>"
 echo ""
 echo "Commands:"
 echo "  help     Show help"

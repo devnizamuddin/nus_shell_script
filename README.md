@@ -3,36 +3,35 @@
 ___
 
 
-## Installation
+## 📂 Project Structure
 
-```sh
 
-chmod +x install.sh bin/mycli
-./install.sh
+```txt
+
+my-cli/
+├── bin/
+│   └── nus              # Main entry point
+│
+├── src/
+│   ├── commands/          # Individual command scripts
+│   │   ├── help.sh
+│   │   ├── init.sh
+│   │   ├── build.sh
+│   │   └── deploy.sh
+│   │
+│   ├── core/              # Shared utilities
+│   │   ├── logger.sh
+│   │   └── utils.sh
+│   │
+│   └── cli.sh             # Command dispatcher
+│
+├── scripts/               # Setup and maintenance scripts
+│   ├── install.sh
+│   └── uninstall.sh
+│
+├── tests/                 # Test scripts
+│   └── test_init.sh
+│
+└── README.md
 
 ```
-
-**Then you can run anywhere**
-
-mycli help
-
-
-## Uninstall
-
-
-```sh
-
-chmod +x uninstall.sh
-./uninstall.sh
-
-```
-
-___
-
-**🔎 How it works**
-
-1. Checks if bin/mycli exists.
-2. Asks user for confirmation.
-3. Creates (or replaces) a symlink in /usr/local/bin/mycli.
-    * Uses sudo if needed.
-4. Prints success message.
